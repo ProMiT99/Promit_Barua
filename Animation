@@ -1,1 +1,196 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<windows.h>
+void gotoxy(int x, int y)
+{
+  static HANDLE h = NULL;
+  if(!h)
+    h = GetStdHandle(STD_OUTPUT_HANDLE);
+  COORD c = { x, y };
+  SetConsoleCursorPosition(h,c);
+}
+  /*printf( "*\n" );
+    Sleep(100); // Sleep three seconds
+    printf("*\n");*/
 
+#include <windows.h>
+#include<stdlib.h>
+#include <stdio.h>
+
+int main() {
+
+    int i,time=80,n=6,x=7,y=14;
+    for(i=0;i<n;i++) //for p
+    {
+        Sleep(time);
+        gotoxy(x,y-i);
+        printf("*");fflush(stdout);
+    }
+    x=7,y=8;
+     for(i=0;i<n;i++)
+     {
+         Sleep(time);
+         gotoxy(x+i,y);
+         printf("*");fflush(stdout);
+     }
+     x=12,y=8,n=3;
+     for(i=0;i<n;i++)
+     {
+         Sleep(time);
+         gotoxy(x,y+i);
+         printf("*");fflush(stdout);
+     }
+     x=12,y=11,n=5;
+     for(i=0;i<n;i++)
+     {
+         Sleep(time);
+         gotoxy(x-i,y);
+         printf("*");fflush(stdout);
+     }
+    time=80,n=6,x=14,y=14;///for R
+    for(i=0;i<n;i++)
+    {
+        Sleep(time);
+        gotoxy(x,y-i);
+        printf("*");fflush(stdout);
+    }
+    n=5,x=14,y=8;
+    for(i=0;i<n;i++)
+    {
+        Sleep(time);
+        gotoxy(x+i,y);
+        printf("*");fflush(stdout);
+    }
+    n=3,x=19,y=8;
+    for(i=0;i<n;i++)
+    {
+        Sleep(time);
+        gotoxy(x,y+i);
+        printf("*");fflush(stdout);
+    }
+    n=5,x=19,y=11;
+    for(i=0;i<n;i++)
+    {
+        Sleep(time);
+        gotoxy(x-i,y);
+        printf("*");fflush(stdout);
+    }
+    n=4,x=14,y=11;
+    for(i=0;i<n;i++)
+    {
+        Sleep(time);
+        gotoxy(x+i,y+i);
+        printf("*");fflush(stdout);
+    }
+    n=7,x=21,y=14;///for O
+    for(i=0;i<n;i++)
+    {
+        Sleep(time);
+        gotoxy(x,y-i);
+        printf("*");fflush(stdout);
+    }
+        for(n=6,i=0,x=21,y=8;i<n;i++)
+        {
+            Sleep(time);
+            gotoxy(x+i,y);
+            printf("*");fflush(stdout);
+        }
+        for(x=27,y=8,n=7,i=0;i<n;i++)
+        {
+            Sleep(time);
+            gotoxy(x,y+i);
+            printf("*");fflush(stdout);
+        }
+        for(x=27,y=14,n=6,i=0;i<n;i++)
+        {
+            Sleep(time);
+            gotoxy(x-i,y);
+            printf("*");fflush(stdout);
+        }
+        for(x=29,y=14,n=7,i=0;i<n;i++)///for M
+        {
+            Sleep(time);
+            gotoxy(x,y-i);
+            printf("*");fflush(stdout);
+        }
+        for(x=29,y=8,n=4,i=0;i<n;i++)///for M
+        {
+            Sleep(time);
+            gotoxy(x+i,y+i);
+            printf("*");fflush(stdout);
+        }
+        for(x=33,y=12,n=5,i=0;i<n;i++)///for M
+        {
+            Sleep(time);
+            gotoxy(x+i,y-i);
+            printf("*");fflush(stdout);
+        }
+        for(x=37,y=8,n=7,i=0;i<n;i++)///for M
+        {
+            Sleep(time);
+            gotoxy(x,y+i);
+            printf("*");fflush(stdout);
+        }
+        for(x=39,y=8,n=7,i=0;i<n;i++)///for I
+        {
+            Sleep(time);
+            gotoxy(x+i,y);
+            printf("*");fflush(stdout);
+        }
+        for(x=42,y=8,n=7,i=0;i<n;i++)///for I
+        {
+            Sleep(time);
+            gotoxy(x,y+i);
+            printf("*");fflush(stdout);
+        }
+        for(x=39,y=14,n=7,i=0;i<n;i++)///for I
+        {
+            Sleep(time);
+            gotoxy(x+i,y);
+            printf("*");fflush(stdout);
+        }
+        for(x=47,y=8,n=7,i=0;i<n;i++)///for T
+        {
+            Sleep(time);
+            gotoxy(x+i,y);
+            printf("*");fflush(stdout);
+        }
+        for(x=50,y=8,n=7,i=0;i<n;i++)///for T
+        {
+            Sleep(time);
+            gotoxy(x,y+i);
+            printf("*");fflush(stdout);
+        }
+        for(x=5,y=15,n=8,i=0;i<n;i++)///x=7,y=14
+        {
+            Sleep(time);
+            gotoxy(x,y-i);
+            printf("|");fflush(stdout);
+        }
+        for(x=5,y=7,n=50,i=0;i<n;i++)///x=7,y=14
+        {
+            Sleep(time);
+            gotoxy(x+i,y);
+            printf("-");fflush(stdout);
+        }
+        for(x=54,y=8,n=8,i=0;i<n;i++)///x=7,y=14
+        {
+            Sleep(time);
+            gotoxy(x,y+i);
+            printf("|");fflush(stdout);
+        }
+        for(x=54,y=15,n=50,i=0;i<n;i++)///x=7,y=14
+        {
+            Sleep(time);
+            gotoxy(x-i,y);
+            printf("-");fflush(stdout);
+        }
+        printf( "Promit " );
+    Sleep(100); // Sleep three seconds
+    printf("Barua\n");
+
+
+
+    getchar();
+    return 0;
+}
